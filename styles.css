@@ -21,6 +21,21 @@ h1{color:#fff;margin:0 0 1rem;font-size:clamp(1.25rem,3vw,2rem);text-align:cente
 .controls{display:flex;justify-content:center;margin-top:0.9rem}
 .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:.5rem .9rem;border-radius:8px;cursor:pointer}
 .btn:hover{background:rgba(255,255,255,0.02)}
+.btn-primary{background:rgba(45,212,191,0.14);border-color:rgba(45,212,191,0.24);color:#d7fffb}
+.btn-primary:hover{background:rgba(45,212,191,0.24)}
+.modal.hidden{display:none}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(4px);z-index:10;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.overlay.open{opacity:1;pointer-events:auto}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:20;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-card{width:min(380px,90vw);background:rgba(12,17,29,0.98);border:1px solid rgba(255,255,255,0.08);box-shadow:0 18px 40px rgba(0,0,0,0.35);border-radius:18px;padding:1.5rem;display:grid;gap:1rem}
+.modal-card h1{margin:0;color:#fff;font-size:1.4rem}
+.modal-card p{margin:0;color:var(--muted);line-height:1.5}
+.player-form{display:grid;gap:0.85rem}
+.player-form label{font-size:.95rem;color:var(--muted);display:block}
+.player-form input{width:100%;padding:.8rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem}
+.player-form input::placeholder{color:rgba(255,255,255,0.45)}
+.player-form input:focus{outline:2px solid rgba(45,212,191,0.25);outline-offset:2px}
 .winner{background:linear-gradient(90deg,rgba(45,212,191,0.08),rgba(96,165,250,0.06));border-color:rgba(45,212,191,0.16)}
 @media (prefers-reduced-motion: no-preference){
     .cell{transition:transform .12s cubic-bezier(.2,.9,.3,1),background .12s ease}
